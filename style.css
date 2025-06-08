@@ -1,0 +1,58 @@
+ul {
+    padding-left: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;   /* Centers the image horizontally */
+    align-items: center;       /* Centers the image vertically, if needed */
+}
+
+img {
+    width: 150px;              /* Adjust as needed */
+    height: 150px;
+    border-radius: 50%;        /* Makes the image circular */
+    object-fit: cover;
+}
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+/* Initial state for fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Triggered state for fade-in and shake */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: shake 0.3s ease-in-out 0.5s;
+}
+
+/* Shake animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
